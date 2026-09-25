@@ -1,0 +1,49 @@
+ /* Viewer overlay */
+  #viewer{
+    position:fixed; inset:0; background:#0f172a; display:none; flex-direction:column; z-index:999;
+  }
+  #viewer.open{ display:flex; }
+  .viewer-bar{
+    display:flex; align-items:center; gap:14px; padding:10px 18px;
+    background:#111827; border-bottom:1px solid #1f2937;
+  }
+  .back-btn{
+    background:#374151; color:#e5e7eb; border:none; padding:9px 16px; border-radius:10px;
+    font-weight:600; cursor:pointer; font-size:.9rem; display:flex; align-items:center; gap:6px;
+  }
+  .back-btn:hover{ background:#4b5563; }
+  .viewer-title{ color:#f1f5f9; font-weight:700; font-size:1rem; }
+  #viewer iframe{ flex:1; width:100%; border:none; background:#fff; }
+
+  /* Login gate */
+  #loginGate{
+    position:fixed; inset:0; z-index:2000; display:flex; align-items:center; justify-content:center;
+    background:
+      radial-gradient(circle at 15% 8%, rgba(99,102,241,.35) 0%, transparent 40%),
+      radial-gradient(circle at 88% 15%, rgba(34,211,238,.30) 0%, transparent 40%),
+      linear-gradient(160deg, var(--bg1), var(--bg2));
+    padding:20px;
+  }
+  .login-card{
+    background:#0f1425; border:1px solid rgba(255,255,255,.1); border-radius:22px;
+    padding:38px 34px; max-width:380px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,.5);
+    text-align:center;
+  }
+  .login-card img{ width:64px; height:64px; border-radius:14px; margin-bottom:14px; }
+  .login-card h2{ margin:0 0 4px; color:#f8fafc; font-size:1.3rem; }
+  .login-card .sub{ color:#94a3b8; font-size:.85rem; margin-bottom:22px; }
+  .login-card label{ display:block; text-align:left; color:#cbd5e1; font-size:.82rem; font-weight:700; margin:14px 0 6px; }
+  .login-card input{
+    width:100%; padding:12px 14px; border-radius:10px; border:1px solid #334155;
+    background:#1e293b; color:#f1f5f9; font-size:.95rem;
+  }
+  .login-card input:focus{ outline:2px solid #818cf8; border-color:#818cf8; }
+  .login-btn{
+    margin-top:22px; width:100%; padding:13px; border:none; border-radius:12px;
+    background:linear-gradient(90deg,#6366f1,#38bdf8); color:#fff; font-weight:800; font-size:1rem;
+    cursor:pointer;
+  }
+  .login-btn:hover{ opacity:.92; }
+  .login-err{ color:#f87171; font-size:.85rem; margin-top:12px; min-height:18px; font-weight:600; }
+  #hubContent{ display:none;
+  }
