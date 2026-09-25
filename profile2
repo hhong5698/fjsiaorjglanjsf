@@ -1,0 +1,62 @@
+ .grid{
+    max-width:1120px; margin:0 auto; padding:24px 24px 80px;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px;
+  }
+  .card{
+    border-radius:22px; padding:2px; position:relative; overflow:hidden; cursor:pointer;
+    transition:transform .28s ease, box-shadow .28s ease;
+    box-shadow:0 14px 34px rgba(0,0,0,.35);
+  }
+  .card:hover{ transform:translateY(-10px) scale(1.015); box-shadow:0 24px 55px rgba(0,0,0,.5); }
+
+  .card.grammar{ background:linear-gradient(135deg,var(--grammar1),var(--grammar2)); }
+  .card.vocab{ background:linear-gradient(135deg,var(--vocab1),var(--vocab2)); }
+  .card.reading{ background:linear-gradient(135deg,var(--reading1),var(--reading2)); }
+
+  .card-inner{
+    background:#0f1425; border-radius:20px; padding:30px 26px 28px; height:100%;
+    position:relative; z-index:1;
+  }
+  .card.grammar .card-inner{ background:linear-gradient(165deg,#161233,#0f1425 70%); }
+  .card.vocab .card-inner{ background:linear-gradient(165deg,#08201c,#0f1425 70%); }
+  .card.reading .card-inner{ background:linear-gradient(165deg,#241405,#0f1425 70%); }
+
+  .glow{
+    position:absolute; width:180px; height:180px; border-radius:50%; filter:blur(60px);
+    opacity:.35; top:-60px; right:-60px; z-index:0;
+  }
+  .card.grammar .glow{ background:var(--grammar2); }
+  .card.vocab .glow{ background:var(--vocab2); }
+  .card.reading .glow{ background:var(--reading2); }
+
+  .icon{
+    width:74px; height:74px; border-radius:18px; display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px; position:relative; z-index:1; overflow:hidden;
+    background:#fdfaf3;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+  }
+  .icon img{ width:100%; height:100%; object-fit:cover; }
+
+  .card h2{ margin:0 0 8px; font-size:1.4rem; color:#f8fafc; position:relative; z-index:1; }
+  .card p{ margin:0 0 22px; color:#cbd5e1; font-size:.95rem; line-height:1.55; position:relative; z-index:1; }
+
+  .tags{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; position:relative; z-index:1; }
+  .tag{
+    font-size:.72rem; padding:5px 12px; border-radius:999px; font-weight:700; color:#0f1425;
+    background:rgba(255,255,255,.85);
+  }
+  .card.grammar .tag{ background:#c7d2fe; }
+  .card.vocab .tag{ background:#a7f3d0; }
+  .card.reading .tag{ background:#fed7aa; }
+
+  .go{
+    display:inline-flex; align-items:center; gap:8px; font-weight:800; font-size:.95rem;
+    padding:11px 20px; border-radius:12px; color:#fff; position:relative; z-index:1;
+    transition:transform .2s ease;
+  }
+  .card.grammar .go{ background:linear-gradient(90deg,var(--grammar1),var(--grammar2)); }
+  .card.vocab .go{ background:linear-gradient(90deg,var(--vocab1),var(--vocab2)); }
+  .card.reading .go{ background:linear-gradient(90deg,var(--reading1),var(--reading2)); }
+  .card:hover .go{ transform:translateX(4px); }
+
+  footer{ text-align:center; padding:26px; color:#64748b; font-size:.85rem; }
